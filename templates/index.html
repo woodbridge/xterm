@@ -16,7 +16,7 @@
     <header>
       <h1>West Coast Economics 2012</h1>
 
-      <p id='who'>We're a group of students from the Montessori High School in Cleveland, Ohio. We love technology, businesses, startups, and entrepreneurship.</p>
+      <p id='who'>We are a group of students from the Montessori High School in Cleveland, Ohio. We love technology, businesses, startups, and entrepreneurship.</p>
     </header>
 
     <section id='content'>
@@ -25,8 +25,21 @@
           <img src="http://placehold.it/960x400" alt="">
         </section>
 
-        {% from locale import currency %}
-        <h1>We need {{ currency(total) }} dollars to get there.</h1>
+        <section id='lineup-section'>
+          <ul id='lineup'>
+          <h1>The Lineup</h1>
+            <li>Google</li>
+            <li>Nest</li>
+            <li>Square</li>
+            <li>Likeness</li>
+            <li>Guilt Group</li>
+          </ul>
+        </section>
+
+        <section id='tick'>
+          {% from locale import currency %}
+          <h1>We need {{ currency(total) }} dollars to get there.</h1>
+        </section>
       </section>
 
       <section id='the-pitch'>
