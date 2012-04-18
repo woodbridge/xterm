@@ -1,0 +1,124 @@
+#container {
+  margin-top: 40px;
+}
+
+header h1 {
+  font-size: 45px;
+}
+
+header #who {
+  font-size: 24px;
+  font-family: "Georgia";
+  line-height: 1.5em;
+  color: #555;
+  margin-top: 35px;
+}
+
+#countdown {
+  margin-top: 50px;
+}
+
+#countdown h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #0050B2;
+  text-shadow: 0 2px 1px #FFF;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Georgia";
+  font-size: 18px;
+}
+
+footer {
+  color: #888;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+#the-pitch form {
+  background-color: #EEE;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+input[type=text] {
+  /*width: 500px;*/
+}
+
+.card-expiry-month, .card-expiry-year {
+  text-align: right;
+}
+
+#the-pitch input[type=text] {
+  height: 50px;
+  font-size: 20px;
+}
+
+select {
+  margin-top: 9px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline;
+    margin-right: 10px;
+    width: 270px !important;
+    margin-right: 20px;
+    float: left;
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+label.error {
+  color: red;
+  font-size: 16px;
+  float: right;
+}
+
+.payment-errors {
+  font-family: "Helvetica";
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: red;
+  text-align: right;
+}
+
+button {
+  background-color: #08B27E;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Helvetica";
+  font-weight: bold;
+  text-transform: uppercase;
+
+  margin-top: 20px;
+  /*margin-left: 220px;*/
+  width: 200px;
+}
+
+#amount-field {
+  width: 100px;
+  text-align: right;
+}
+
+.wedge {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#staaack ul li, #staaack ul li a {
+  font-family: "Georgia";
+  font-size: 20px;
+  margin-top: 15px;
+}

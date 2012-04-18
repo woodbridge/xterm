@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>Justin</title>
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+ <script type="text/javascript" src="/static/js/jquery.js"></script>
+ <script type="text/javascript" src="/static/js/jquery.validate.js"></script>
+ <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+ <script type="text/javascript" src="/static/js/app.js"></script>
+
+</head>
+<body>
+
+  <section class='container' id='container'>
+    <header>
+      <h1>West Coast Economics 2012</h1>
+
+      <p id='who'>We're a group of students from the Montessori High School in Cleveland, Ohio. We love technology, businesses, startups, and entrepreneurship.</p>
+    </header>
+
+    <section id='content'>
+      <section id='countdown'>
+        <section id='us'>
+          <img src="http://placehold.it/960x400" alt="">
+        </section>
+
+        {% from locale import currency %}
+        <h1>We need {{ currency(total) }} dollars to get there.</h1>
+      </section>
+
+      <section id='the-pitch'>
+        <h1>We Need Your Help</h1>
+
+        <p class='wedge'>If you'd rather donate with cash or check, send an email to <a href='mailto:jwoodbridge@me.com'>jwoodbridge@me.com</a></p>
+
+        <div class='payment-errors'>
+          <p></p>
+        </div>
+
+        <form action="/payments" id='payments' method='post'>
+
+          <div class='block halfsie'>
+            <label for="name">Your Name</label>
+            <input type='text' style='width: 300px;' id='name-field' name='name' class='name'/>
+          </div>
+
+          <div class='block halfsie'>
+            <label for="name">Email</label>
+    <input type='text' style='width: 300px;' id='name-field' name='email' class='email'/>
+          </div>
+
+
+          <div class='block halfsie'>
+            <label for="amount">Amount</label>
+            <input type='text' id='amount-field' size='3' name='amount'/>
+          </div>
+
+          <div class='block halfsie'>
+            <label for="amount">Card Number</label>
+            <input type='text' style='width: 300px;' class='card-number'/>
+          </div>
+
+          <div class='block halfsie'>
+            <label for="amount" class='card-number'>CCV</label>
+            <input type='text' class='card-cvc' style='width: 100px;'/>
+          </div>
+
+         <label>Expiration (MM/YYYY)</label>
+
+            <select class="card-expiry-month stripe-sensitive required">
+            </select>
+            <script type="text/javascript">
+              var select = $(".card-expiry-month"),
+                  month = new Date().getMonth() + 1;
+              for (var i = 1; i <= 12; i++) {
+                  select.append($("<option value='"+i+"' "+(month === i ? "selected" : "")+">"+i+"</option>"))
+              }
+             </script>
+            <span id='gap'> / </span>
+            <select class="card-expiry-year stripe-sensitive required"></select>
+            <script type="text/javascript">
+                var select = $(".card-expiry-year"),
+                year = new Date().getFullYear();
+
+                for (var i = 0; i < 12; i++) {
+                  select.append($("<option value='"+(i + year)+"' "+(i === 0 ? "selected" : "")+">"+(i + year)+"</option>"))
+                }
+            </script>
+          <button class='submit-button'>Donate</button>
+
+        </form>
+
+      </section>
+
+      <section id='support'>
+        <h1>Companies That Support Us</h1>
+      </section>
+
+    </section>
+
+    <footer>
+      <p><a href='/stack'>Want to know how this site runs?</a></p>
+    </footer>
+  </section>
+
+</body>
+</html>
