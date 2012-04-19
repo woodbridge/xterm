@@ -104,7 +104,7 @@ if __name__ == "__main__":
 
     if production:
         log = open('logs/' + 'tornado.' + str(options.port) + '.log', 'a+')
-        ctx = daem`on.DaemonContext(stdout=log, stderr=log, working_directory='.')
+        ctx = daemon.DaemonContext(stdout=log, stderr=log, working_directory='.')
         ctx.open()
 
     App().listen(options.port)
