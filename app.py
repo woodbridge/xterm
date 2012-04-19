@@ -80,10 +80,6 @@ class AdminController(tornado.web.RequestHandler):
         amount = database.session.query(func.sum(Person.amount)).scalar() / 100
         self.render('admin.html', people=people, amount=amount)
 
-application = tornado.web.Application([
-], debug=True, template_path='templates/', static_path='static/')
-
-
 class App(tornado.web.Application):
     def __init__(self):
         handlers = [
@@ -108,16 +104,16 @@ if __name__ == "__main__":
 
     if production:
         log = open('logs/' + 'tornado.' + str(options.port) + '.log', 'a+')
-        ctx = daemon.DaemonContext(stdout=log, stderr=log, working_directory='.')
+        ctx = daem`on.DaemonContext(stdout=log, stderr=log, working_directory='.')
         ctx.open()
 
     App().listen(options.port)
+
     print "Booting up the x-term site on http://127.0.0.1:%d" % options.port
 
 
     if not os.path.exists(options.pid_dir):
         os.mkdir(options.pid_dir)
-
 
     pid = os.getpid()
     pid_file_path = os.path.join(options.pid_dir, 'app.pid')

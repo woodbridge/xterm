@@ -14,7 +14,7 @@ def stop():
 
 def start():
   with cd(env.code_dir):
-    run('XTERM_ENV=production python app.py')
+    run('XTERM_ENV=production python app.py --port=')
 
 def install_deps():
   with cd(env.code_dir):
