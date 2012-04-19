@@ -6,10 +6,6 @@ env.hosts = ['justinwoodbridge.com']
 env.code_dir = '/var/www/xterm'
 env.pid_dir = os.path.join(env.code_dir, 'pids')
 
-def setup():
-  with cd('/var/www'):
-    os.mkdir('xterm')
-
 def stop():
   # If the app wasn't running, that's okay.
   env.warn_only = True
@@ -19,7 +15,6 @@ def stop():
 def start():
   with cd(env.code_dir):
     run('XTERM_ENV=production python app.py')
-
 
 def install_deps():
   with cd(env.code_dir):

@@ -118,13 +118,13 @@ if __name__ == "__main__":
     if not os.path.exists(options.pid_dir):
         os.mkdir(options.pid_dir)
 
-    if production:
-        pid = os.getpid()
-        pid_file_path = os.path.join(options.pid_dir, 'app.pid')
-        pid_file = open(pid_file_path, 'wb')
-        pid_file.seek(0)
-        pid_file.truncate(0)
-        pid_file.write(str(pid))
-        pid_file.close()
+
+    pid = os.getpid()
+    pid_file_path = os.path.join(options.pid_dir, 'app.pid')
+    pid_file = open(pid_file_path, 'wb')
+    pid_file.seek(0)
+    pid_file.truncate(0)
+    pid_file.write(str(pid))
+    pid_file.close()
 
     tornado.ioloop.IOLoop.instance().start()
