@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>The Admin Page</title>
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+ <script type="text/javascript" src="/static/js/jquery.js"></script>
+</head>
+<body>
+
+  <section class='container' id='container'>
+  {% import locale %}
+
+
+  <header style='margin-bottom: 100px;'>
+    <h1>The Haul: {{ locale.currency(amount) }}</h1>
+  </header>
+
+
+  <h1>The People</h1>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for person in people %}
+        <tr>
+          <td>{{ person.name }}</td>
+          <td>{{ person.email }}</td>
+          <td>{{ locale.currency(person.amount / 100) }}</td>
+        </tr>
+      {% end %}
+    </tbody>
+  </table>
+
+  </section>
+
+</body>
+</html>

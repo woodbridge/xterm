@@ -28,13 +28,24 @@
         <section id='lineup-section'>
           <ul id='lineup'>
           <h1>The Lineup</h1>
-            <li>Google</li>
-            <li>Nest</li>
-            <li>Square</li>
-            <li>Likeness</li>
-            <li>Guilt Group</li>
+            <li><a href="http://nest.com">Nest Labs</a></li>
+            <li><a href="http://likeness.com">Likeness</a></li>
+            <li><a href="http://peel.com">Peel</a></li>
+            <li><a href="http://speck.com">Speck</a></li>
+            <li><a href="http://square.com">Square</a></li>
           </ul>
         </section>
+
+        <section id='the-pitch'>
+          <p>Last year we went to New York, and visited companies like Union Square Ventures and Stack Overflow. This year we're planning an X-Term to San Francisco, and we've scheduled meetings with companies like Peel, Nest and Square.</p>
+
+          <p>X-Terms are two-week intensive classes. They're meant to focus on the student's interests. X-Terms are entirely student-planned and fundraised. We even have to pay for the teachers to come with us.</p>
+
+
+          <p>We've been raising money all year, but we're still not there yet.</p>
+        </section>
+
+
 
         <section id='tick'>
           {% from locale import currency %}
@@ -43,7 +54,7 @@
       </section>
 
       <section id='the-pitch'>
-        <h1>We Need Your Help</h1>
+        <h1>We Need Your Help Before May 1</h1>
 
         <p class='wedge'>If you'd rather donate with cash or check, send an email to <a href='mailto:jwoodbridge@me.com'>jwoodbridge@me.com</a></p>
 
@@ -66,7 +77,7 @@
 
           <div class='block halfsie'>
             <label for="amount">Amount</label>
-            <input type='text' id='amount-field' size='3' name='amount'/>
+            <span id='dollar'>$</span><input type='text' id='amount-field' size='3' name='amount'/>
           </div>
 
           <div class='block halfsie'>
@@ -113,7 +124,10 @@
     </section>
 
     <footer>
-      <p><a href='/stack'>Want to know how this site runs?</a></p>
+    <p id='yo' style='font-size: 30px; text-align: center;'>We appreciate your support.</p>
+  <p style='font-size: 30px; text-align: center;'>- Justin, Joe, Brandon, Courtney, Felix, and Sam</p>
+
+      <p id='link'><a href='/stack'>Want to know how this site runs?</a></p>
     </footer>
   </section>
 

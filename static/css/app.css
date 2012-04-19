@@ -9,9 +9,9 @@ header h1 {
 header #who {
   font-size: 24px;
   font-family: "Georgia";
-  line-height: 1.5em;
   color: #555;
   margin-top: 35px;
+  line-height: 1.5em;
 }
 
 #countdown {
@@ -32,6 +32,8 @@ section {
 p {
   font-family: "Georgia";
   font-size: 18px;
+  line-height: 1.5em;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -108,7 +110,7 @@ button {
 }
 
 #amount-field {
-  width: 100px;
+  width: 60px;
   text-align: right;
 }
 
@@ -144,6 +146,10 @@ ul li {
   margin-right: 30px;
 }
 
+#lineup li a {
+  color: #333;
+}
+
 #lineup-section {
   margin-bottom: 80px;
   margin-top: 80px;
@@ -156,4 +162,13 @@ ul li {
 #lineup-section h1 {
   font-size: 36px;
   margin-bottom: 40px;
+}
+
+span#dollar {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+#link {
+  margin-top: 100px;
 }
