@@ -103,6 +103,7 @@ if __name__ == "__main__":
     production = os.environ.get('XTERM_ENV')
 
     if production:
+        setlocale(LC_ALL, '')
         log = open('logs/' + 'tornado.' + str(options.port) + '.log', 'a+')
         ctx = daemon.DaemonContext(stdout=log, stderr=log, working_directory='.')
         ctx.open()

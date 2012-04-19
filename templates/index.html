@@ -49,7 +49,8 @@
 
 
         <section id='tick'>
-          {% from locale import currency %}
+          {% from locale import currency, setlocale %}
+
           <h1>We need {{ currency(total) }} dollars to get there.</h1>
         </section>
       </section>
